@@ -1,0 +1,21 @@
+{
+  "name": "2fa-checkers-live",
+  "version": "1.0.0",
+  "description": "2FA Checkers live by saurus - Standalone OTP / 2FA Authenticator & Generator with Vercel Serverless & Local Support",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "otplib": "^12.0.1"
+  },
+  "keywords": [
+    "2fa",
+    "totp",
+    "authenticator",
+    "2falive"
+  ],
+  "author": "saurus (github.com/faloryn/2faliveweb)",
+  "license": "MIT"
+}

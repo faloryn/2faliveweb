@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Primary Meta Tags -->
+  <title>2FA Checkers live by saurus - Instant TOTP Authenticator &amp; Token Generator</title>
+  <meta name="title" content="2FA Checkers live by saurus - Instant TOTP Authenticator &amp; Token Generator" />
+  <meta name="description" content="2FA Checkers live by saurus: Standalone 2FA TOTP code generator &amp; validator. 100% compatible with 2fa.live API /tok/:key. Fast, secure, open-source with Vercel &amp; Localhost support." />
+  <meta name="keywords" content="2fa live, 2fa checker, 2fa generator, totp generator, rfc 6238, authenticator code, 2fa api, saurus, faloryn, 2faliveweb" />
+  <meta name="author" content="saurus" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0a0e17" />
+  <link rel="canonical" href="https://2faliveweb.vercel.app/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://2faliveweb.vercel.app/" />
+  <meta property="og:title" content="2FA Checkers live by saurus - Instant TOTP Authenticator" />
+  <meta property="og:description" content="Standalone 2FA TOTP code generator &amp; validator. 100% compatible with 2fa.live API without external server dependencies." />
+  <meta property="og:image" content="/logo.svg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:url" content="https://2faliveweb.vercel.app/" />
+  <meta property="twitter:title" content="2FA Checkers live by saurus - Instant TOTP Authenticator" />
+  <meta property="twitter:description" content="Standalone 2FA TOTP code generator &amp; validator. Compatible with 2fa.live API." />
+  <meta property="twitter:image" content="/logo.svg" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="logo.svg" />
+  <link rel="apple-touch-icon" href="logo.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Schema.org JSON-LD Structured Data for 100% SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "2FA Checkers live by saurus",
+    "url": "https://2faliveweb.vercel.app/",
+    "description": "Standalone RFC 6238 TOTP Authenticator and 2FA Code Generator compatible with 2fa.live API.",
+    "applicationCategory": "SecurityApplication",
+    "operatingSystem": "All",
+    "author": {
+      "@type": "Person",
+      "name": "saurus",
+      "url": "https://github.com/faloryn"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div class="background-decorations">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <main class="app-container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo-wrapper">
+        <img src="logo.svg" alt="2FA Checkers live Logo" width="56" height="56" class="app-logo" />
+      </div>
+      <div class="badge-tag">
+        <span class="pulsing-dot"></span>
+        <span>STANDALONE RFC-6238 TOTP ENGINE</span>
+      </div>
+      <h1 class="brand-title">2FA Checkers live <span class="gradient-text">by saurus</span></h1>
+      <p class="brand-subtitle">
+        Generator &amp; Validasi Token 2FA instan tanpa ketergantungan server 2fa.live pihak ketiga. Siap dideploy di <strong>Vercel</strong> &amp; <strong>Localhost</strong>.
+      </p>
+      <div class="repo-link">
+        <a href="https://github.com/faloryn/2faliveweb" target="_blank" rel="noopener noreferrer" id="github-link">
+          <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          github.com/faloryn/2faliveweb
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Card -->
+    <section class="checker-card" aria-label="2FA Generator Card">
+      <div class="card-header">
+        <label for="secret-input" class="label-title">
+          <svg class="input-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0110 0v4"></path>
+          </svg>
+          Masukkan 2FA Secret Key / Base32
+        </label>
+        <span class="mode-badge" id="execution-mode">STANDALONE (BROWSER/LOCAL)</span>
+      </div>
+
+      <div class="input-wrapper">
+        <input 
+          type="text" 
+          id="secret-input" 
+          placeholder="Contoh: ABCDEFGHIJKLMN atau JBSWY3DPEHPK3PXP" 
+          autocomplete="off" 
+          spellcheck="false"
+        />
+        <button id="clear-btn" class="clear-btn" title="Hapus input" aria-label="Hapus">
+          ✕
+        </button>
+      </div>
+
+      <div class="action-row">
+        <button id="get-token-btn" class="primary-btn">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+          Generate 2FA Token
+        </button>
+        <button id="sample-btn" class="secondary-btn">
+          Gunakan Secret Contoh
+        </button>
+      </div>
+
+      <!-- Result Display Area -->
+      <div class="result-box" id="result-box">
+        <div class="result-top">
+          <span class="result-label">KODE TOKEN VERIFIKASI</span>
+          <div class="timer-badge" id="timer-badge">
+            <svg class="clock-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span id="countdown-text">30s</span>
+          </div>
+        </div>
+
+        <div class="token-presentation">
+          <div class="token-digits" id="token-display">------</div>
+          <button id="copy-btn" class="copy-btn" title="Salin Kode OTP">
+            <svg class="copy-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"></path>
+            </svg>
+            <span id="copy-label">Salin</span>
+          </button>
+        </div>
+
+        <div class="progress-bar-container">
+          <div class="progress-bar-fill" id="progress-bar"></div>
+        </div>
+
+        <div class="api-preview">
+          <span class="api-title">Response JSON (100% kompatibel dengan 2fa.live API):</span>
+          <pre class="json-code" id="json-preview">{"token":"------"}</pre>
+        </div>
+      </div>
+
+      <!-- Error Box -->
+      <div class="error-box" id="error-box" style="display: none;">
+        <span class="error-icon">⚠️</span>
+        <span id="error-message">Secret key tidak valid</span>
+      </div>
+    </section>
+
+    <!-- API Documentation / Integration Section -->
+    <section class="api-docs-card" aria-label="API Integration Docs">
+      <h2 class="section-title">Dokumentasi API 2fa.live Compatibility</h2>
+      <p class="section-desc">Gunakan URL di bawah ini pada bot, script Python, cURL, Axios, atau ekstensi browser Anda:</p>
+
+      <div class="code-block">
+        <div class="code-header">
+          <span>ENDPOINT 1: Persis seperti 2fa.live</span>
+          <button class="small-copy-btn" data-copy="curl http://localhost:3000/tok/ABCDEFGHIJKLMN">Copy cURL</button>
+        </div>
+        <code>GET /tok/:secretKey</code>
+      </div>
+
+      <div class="code-block">
+        <div class="code-header">
+          <span>ENDPOINT 2: Query param Vercel serverless</span>
+          <button class="small-copy-btn" data-copy="curl http://localhost:3000/api/tok?key=ABCDEFGHIJKLMN">Copy cURL</button>
+        </div>
+        <code>GET /api/tok?key=:secretKey</code>
+      </div>
+
+      <div class="spec-list">
+        <div class="spec-item">
+          <strong>Response Format:</strong>
+          <code>{"token": "439308"}</code>
+        </div>
+        <div class="spec-item">
+          <strong>CORS:</strong>
+          <code>Access-Control-Allow-Origin: *</code> (Bisa direquest dari web/domain manapun)
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Dibuat untuk kebutuhan <strong>2FA Checkers live by saurus</strong> &bull; Open Source di <a href="https://github.com/faloryn/2faliveweb" target="_blank" rel="noopener noreferrer">github.com/faloryn/2faliveweb</a></p>
+    </footer>
+  </main>
+
+  <div id="toast" class="toast">Kode berhasil disalin!</div>
+
+  <script src="app.js"></script>
+</body>
+</html>
